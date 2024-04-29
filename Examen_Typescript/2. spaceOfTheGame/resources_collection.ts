@@ -22,10 +22,8 @@ export function getRandomResourceWithQuantity(): ResourceWithQuantity {
     resources[Math.floor(Math.random() * resources.length)];
 
   // Generate a random quantity between 1 and 100
-  const randomQuantity: number = Math.floor(Math.random() * 50) + 1;
+  const randomQuantity: number = Math.floor(Math.random() * 40) + 1;
 
   // Return the resource with its quantity
   return { resource: randomResource, quantity: randomQuantity };
 }
-
-// Example usage: randomly select a resource with its quantity

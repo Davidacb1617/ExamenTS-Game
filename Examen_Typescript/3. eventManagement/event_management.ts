@@ -52,4 +52,3 @@ export function handleEvent(event: EventTypeManagement) {
     );
   }
 }
-// Main game loop

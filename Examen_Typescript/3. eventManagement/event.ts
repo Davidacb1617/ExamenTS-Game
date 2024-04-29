@@ -1,7 +1,7 @@
 import { Spaceship } from '../2. spaceOfTheGame/spaceship.js';
 
 // Define an enum for the types of events
-export enum EventType {
+export const enum EventType {
   Collision = 'Choque',
   Meteorite = 'Meteorito',
   BlackHole = 'Agujero Negro',

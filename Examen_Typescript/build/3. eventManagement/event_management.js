@@ -21,4 +21,3 @@ export function handleEvent(event) {
         console.log(chalk.redBright(`Escapaste a la posición: (${dragEvent.position.x}, ${dragEvent.position.y})`));
     }
 }
-// Main game loop

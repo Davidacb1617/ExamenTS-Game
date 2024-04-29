@@ -72,7 +72,6 @@ let p1 = new Player(player.name, 10);
 //MISSIONS
 let m1 = new Mission(mission.select, 'Investigar el planeta en busca de vida humana');
 let m2 = new Mission(mission.select, 'Recolectar recursos dentro del planeta');
-let m3 = new Mission(mission.select, 'Entregar recursos a otras bases espaciales');
 //RANDOM RESOURCES
 const randomResourceAndQuantity = getRandomResourceWithQuantity();
 //RANDOM EVENTS
@@ -90,10 +89,10 @@ const direction3 = new Exploration('este');
 const direction4 = new Exploration('oeste');
 //GAME LOOP
 do {
-    // Investigate Mission
     console.log(chalk.bold.green(`Te encuentras dentro de la nave ${p1.name}`));
     console.log(chalk.bold.green(`La nave cuenta con una vida de ${p1.spaceshipHealth}`));
     console.log(chalk.bold.green(`La nave tiene un motor espacial avanzado, el cuál te permite mantener siempre la misma velocidad de ${p1.speed} km/h`));
+    // Investigate Mission
     if (mission.select === 'Investigación') {
         console.log(chalk.bold.green(`Hola ${p1.name}, la misión del día de hoy es: ${m1.name}`));
         console.log(chalk.bold.green(`La nave cuenta con una tripulación de: ${p1.people} personas`));
@@ -243,9 +242,9 @@ do {
     }
     // Recollect Resources Mission
     if (mission.select === 'Recolectar Recursos') {
-        console.log(chalk.bold.green(`Hola ${p1.name}, la misión del día de hoy es: ${m1.name}`));
+        console.log(chalk.bold.green(`Hola ${p1.name}, la misión del día de hoy es: ${m2.name}`));
         console.log(chalk.bold.green(`La nave cuenta con una tripulación de: ${p1.people} personas`));
-        console.log(chalk.bold.yellow(`Descripción: ${m1.description}`));
+        console.log(chalk.bold.yellow(`Descripción: ${m2.description}`));
         let planet = await inquirer.prompt({
             type: 'list',
             name: 'select',
